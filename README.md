@@ -2,8 +2,7 @@
 
 ## Overview
 
-This program is a simple **Enrollment Management System**.  
-It allows administrative staff to manage student records.
+This program is a simple **Enrollment Management System**. It allows to manage student records.
 
 The program can:
 
@@ -15,14 +14,13 @@ The program can:
 
 The program is written in **Swift** and follows the pseudocode from Part 1.
 
+Program UI
 ![Program UI Screenshot](ui.png)
 
 ---
 
 # Student Information
-
 Each student record contains:
-
 - Student ID
 - First Name
 - Last Name
@@ -33,18 +31,9 @@ Each student record contains:
 - Program
 - Number of Courses
 
-Student records are stored in an **array container**.
-
-```swift
-var studentList: [Student]
-```
-
 ---
 
 # Variables
-
-Variables are used to store student data and program information.
-
 Examples:
 
 ```swift
@@ -52,10 +41,6 @@ var studentId: Int
 var firstName: String
 var previousGPA: Double
 ```
-
-Each variable stores a specific attribute of a student.
-
-The program also uses a variable to store all student records:
 
 ```swift
 var studentList: [Student]
@@ -87,13 +72,14 @@ Example:
 
 ```swift
 struct Student
+var studentList: [Student]
 ```
 
 ---
 
 # Data Binding
 
-This program demonstrates both **static binding** and **dynamic data structures**.
+This program uses both **static binding** and **dynamic data structures**.
 
 ### Static Binding
 
@@ -122,7 +108,7 @@ This array can change size during program execution. When a new student is added
 
 # Scoping
 
-Variables have different **scopes** depending on where they are declared.
+Variables have different scopes depending on where they are declared.
 
 Example:
 
@@ -138,7 +124,7 @@ The variable `firstName` exists only inside the `addStudent()` function.
 
 # Referencing
 
-The program demonstrates both **value types** and **reference types**.
+The program uses both **value types** and **reference types**.
 In Swift, a **struct** is a value type. a **class** is a reference type.
 
 ### Value Type
@@ -147,7 +133,7 @@ In Swift, a **struct** is a value type. a **class** is a reference type.
 struct Student
 ```
 
-When a struct value is assigned or passed to a function, a **copy of the data** is created.
+When a struct value is assigned or passed to a function, a copy of the data is created.
 
 ---
 
@@ -158,11 +144,11 @@ When a struct value is assigned or passed to a function, a **copy of the data** 
 class EnrollmentController
 ```
 
-When a class object is assigned to another variable, both variables refer to the **same object in memory**.
+When a class object is assigned to another variable, both variables refer to the same object in memory.
 
-# Subprograms (Functions)
+# Subprograms
 
-The program is divided into smaller **subprograms**.
+The program is divided into smaller subprograms.
 
 Examples:
 
