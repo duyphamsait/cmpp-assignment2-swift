@@ -1,6 +1,6 @@
 //
 //  Student.swift
-//  cmpp_assignment2_ enrollment
+//  cmpp_assignment2_enrollment
 //
 //  Created by Duy Pham on 2026-03-09.
 //
@@ -17,42 +17,37 @@ extension String {
     }
 }
 
-struct Student:Codable {
-    
+struct Student: Codable {
     var studentId: Int
     var firstName: String
     var lastName: String
-    var dateOfBirth: String
     var gender: String
-    var previousGPA: Double
-    var currentSemester: Int
     var programName: String
-    var numberOfCourses: Int
+    var currentSemester: Int
+    var noOfCourses: Int
+    var dob: String
+    var gpa: Double
 }
 
 extension Student {
     
     func display(recordNumber: Int) -> String {
-        
         return """
         
         Record #\(recordNumber)
         Student ID       : \(studentId)
         First Name       : \(firstName)
         Last Name        : \(lastName)
-        Date of Birth    : \(dateOfBirth)
+        Date of Birth    : \(dob)
         Gender           : \(gender)
-        Previous GPA     : \(String(format: "%.2f", previousGPA))
+        GPA              : \(String(format: "%.2f", gpa))
         Current Semester : \(currentSemester)
         Program          : \(programName)
-        Number of Courses: \(numberOfCourses)
+        Number of Courses: \(noOfCourses)
         """
     }
     
-    // MARK: - Table Header
-    
     static func tableHeader() -> String {
-        
         return
             "No".pad(4) +
             "ID".pad(8) +
@@ -65,18 +60,16 @@ extension Student {
             "Courses"
     }
     
-    // MARK: - Table Row
-    
     func tableRow(recordNumber: Int) -> String {
         return
             "\(recordNumber)".pad(4) +
             "\(studentId)".pad(8) +
             firstName.pad(15) +
             lastName.pad(15) +
-            dateOfBirth.pad(14) +
+            dob.pad(14) +
             gender.pad(10) +
-            String(format: "%.2f", previousGPA).pad(8) +
+            String(format: "%.2f", gpa).pad(8) +
             programName.pad(25) +
-            "\(numberOfCourses)"
+            "\(noOfCourses)"
     }
 }

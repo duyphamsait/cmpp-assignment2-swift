@@ -71,9 +71,17 @@ var previousGPA: Double
 Example:
 
 ```swift
-struct Student
-var studentList: [Student]
-```
+struct Student {
+    var studentId: Int
+    var firstName: String
+    var lastName: String
+    var gender: String
+    var programName: String
+    var currentSemester: Int
+    var noOfCourses: Int
+    var dob: String
+    var gpa: Double
+}```
 
 ---
 
@@ -125,7 +133,7 @@ The variable `firstName` exists only inside the `addStudent()` function.
 # Referencing
 
 The program uses both **value types** and **reference types**.
-In Swift, a **struct** is a value type. a **class** is a reference type.
+In Swift, a **struct** is a value type, while a **class** is a reference type.
 
 ### Value Type
 
@@ -220,8 +228,8 @@ while running {
 Loops are also used to display student records.
 
 ```swift
-for student in studentList {
-    print(student)
+for (index, student) in students.enumerated() {
+    print(student.tableRow(recordNumber: index + 1))
 }
 ```
 
