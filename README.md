@@ -81,7 +81,8 @@ struct Student {
     var noOfCourses: Int
     var dob: String
     var gpa: Double
-}```
+}
+```
 
 ---
 
